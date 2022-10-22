@@ -5,22 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Marc Romero" content="To Do List Beta" />
-    <title>To Do List</title>
+    <title>To Do List | Marc Romero ©</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
       <a href="https://github.com/MarcusRomero" target="_blank">
-        <img src="./resources/github-logo-img.png" alt="Lien vers GitHub" />
+        <img src="./resources/github-logo-img.png" alt="link to my GitHub" />
       </a>
       <p>© Marc Romero</p>
     </header>
     <main>
+      <input type="submit" value="🔄" alt="xxxxxx" />
       <h1>To Do List</h1>
-      <div>
-        <input type="text" value="List" />
-        <button>+</button>
-      </div>
+
+      <form>
+        <input
+          type="text"
+          placeholder="Write your homework here..."
+          maxlength="40"
+        />
+        <input type="submit" value="+" />
+      </form>
+      <ul></ul>
     </main>
   </body>
   <script src="./script.js"></script>

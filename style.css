@@ -7,38 +7,190 @@
     font-family: 'Source Code Pro', monospace;
 }
 
+    :root{
+        --white: #fafafb;
+        --purple: #9a67ea;
+        --blue-light: #04d4c3;
+        --green: #2c7a904a;
+    }
+
+
+body{
+    background: linear-gradient(var(--purple),var(--blue-light));
+    min-height: 100vh;
+}
+
+
 header{
+    position: absolute; top: 5%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    border: 2px solid red;
+    justify-content: center;
     width: 100%;
     height: 10vh;
-    background-color: rgb(210, 210, 210);
+    filter: blur(3px);
+    transition: 0.5s;
+    opacity: 0.1;
+}   header:hover{
+        filter: blur(0);
+        opacity: 0.7;
 }
 
 
 header a img{
     width: 100px;
+    cursor: help;
+}   header a img:hover{
+        transform: scale(1.1);
+        transition: 1s;
 }
 
+
+p{  
+    opacity: 0.4;
+}
+
+
 main {
+    position: absolute; top: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid blue;
     width: 100%;
-    height: 50vh;
-    background: linear-gradient(rgb(210, 210, 210), rgb(255, 255, 255));
+    padding-bottom: 10vh;
 }
+
+
+input[type="submit"]{
+    position: fixed; top: 15px; left: 15px;
+    width: 4rem;
+    height: 4rem;
+    font-size: 4vh;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0.2;
+    cursor:pointer;
+}   input[type="submit"]:hover{
+        transition: 0.6s;
+        transform: scale(1);
+        opacity: 0.8;
+        background-color: rgba(0, 26, 255, 0.2);
+        box-shadow: 0 0 40px 40px rgba(0, 26, 255, 0.1);
+}   input[type="submit"]:active{
+        font-size: 8rem;
+        width: 12rem;
+        height: 12rem;
+        rotate: -2000deg;
+}
+
+
 
 h1{
-    padding: 2vh;
-    font-size: 6rem;
+    cursor: none;
+    font-size: 5rem;
+    z-index: 1;
 }
 
-div{
+
+form{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+
+input[type="text"]{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 40px 40px rgba(255, 255, 255, 0.1);
+    width: 30rem;
+    font-size: 3vh;
+    padding: 1rem;
+    color: var(--white);
+}   input[type="text"]:hover{
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.2);
+
+
+}
+
+input[type="submit"]:nth-last-child(1){
+    display: none;
+}
+
+input::placeholder{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+button{
+    width: 3rem;
+    height: 3vh;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 4px;
+    cursor: pointer;
+}
+
+
+.buttonDelete{
+    margin-right: 1rem;
+}   .buttonDelete:hover{
+        background-color: rgba(255, 0, 0, 0.5);
+        transition: 0.4s;
+        rotate: 15deg;
+}   .buttonDelete:active{
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: scale(1.2);
+        rotate: 150deg;
+}
+
+.buttonDone{
+    margin-left: 1rem;
+}   .buttonDone:hover{
+        background-color: rgba(64, 242, 0, 0.5);
+        transition: 0.4s;
+        transform: scale(1.1);
+}   .buttonDone:active{
+        background-color: rgba(234, 242, 0, 0.5);
+        transform: scaleX(2);
+}
+
+
+li {
+    width: 32rem;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+
+
+.containerText{
+    
+}   .containerText:hover{
+        background-color: rgba(255, 255, 255, 0.15);
+        color: var(--white);
+        cursor:pointer;
+        transition: 0.2s;
+        transform: scale(1.03);
+}   .containerText:active{
+        cursor:grabbing;
 }
