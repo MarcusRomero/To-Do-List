@@ -16,25 +16,25 @@
 
 
 body{
-    background: linear-gradient(var(--purple),var(--blue-light));
-    min-height: 100vh;
+    background-image: linear-gradient(90deg, #ab7ef3, #5fbfb7);
+    height: 1px;
 }
 
 
 header{
-    position: absolute; top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position:absolute; top: 2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     justify-content: center;
-    width: 100%;
-    height: 10vh;
-    filter: blur(3px);
-    transition: 0.5s;
-    opacity: 0.1;
+    width:100%;
+    height:10vh;
+    filter:blur(3px);
+    transition:0.5s;
+    opacity:0.1;
 }   header:hover{
-        filter: blur(0);
-        opacity: 0.7;
+        filter:blur(0);
+        opacity:0.7;
 }
 
 
@@ -46,7 +46,7 @@ header a img{
         transition: 1s;
 }
 
-
+/* © Marc Romero */
 p{  
     opacity: 0.4;
 }
@@ -61,7 +61,7 @@ main {
     padding-bottom: 10vh;
 }
 
-
+/* buttonReset */
 input[type="submit"]{
     position: fixed; top: 15px; left: 15px;
     width: 4rem;
@@ -87,9 +87,11 @@ input[type="submit"]{
 
 
 h1{
+    text-align: center;
     cursor: none;
     font-size: 5rem;
     z-index: 1;
+    padding-bottom: 6vh;
 }
 
 
@@ -112,14 +114,14 @@ input[type="text"]{
     color: var(--white);
 }   input[type="text"]:hover{
         border: 2px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.2);
-
-
+        box-shadow: 0 0 100px 150px rgba(255, 255, 255, 0.2);
 }
+
 
 input[type="submit"]:nth-last-child(1){
     display: none;
 }
+
 
 input::placeholder{
     text-align: center;
@@ -133,7 +135,7 @@ ul{
     flex-direction: column;
 }
 
-
+/* les boutons de mon conteneur */
 button{
     width: 3rem;
     height: 3vh;
@@ -150,7 +152,7 @@ button{
 }   .buttonDelete:hover{
         background-color: rgba(255, 0, 0, 0.5);
         transition: 0.4s;
-        rotate: 15deg;
+        rotate: 30deg;
 }   .buttonDelete:active{
         background-color: rgba(255, 255, 255, 0.5);
         transform: scale(1.2);
@@ -168,6 +170,11 @@ button{
         transform: scaleX(2);
 }
 
+.trashContent{
+    opacity: 0.4;
+    background-color: rgba(244, 241, 25, 0.2);
+}
+
 
 li {
     width: 32rem;
@@ -183,14 +190,14 @@ li {
 
 
 
-.containerText{
+.boxContainer{
     
-}   .containerText:hover{
+}   .boxContainer:hover{
         background-color: rgba(255, 255, 255, 0.15);
         color: var(--white);
         cursor:pointer;
         transition: 0.2s;
         transform: scale(1.03);
-}   .containerText:active{
+}   .boxContainer:active{
         cursor:grabbing;
 }
